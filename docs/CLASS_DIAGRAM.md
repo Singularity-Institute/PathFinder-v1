@@ -325,11 +325,11 @@ graph TB
 
     Main --> examples[com.flightplanner.examples]
     examples --> core[com.flightplanner.core]
-    examples --> utils[com.flightplanner.utils]                                                                                         
-    core --> models[com.flightplanner.models]                                                                                                                                 
-    core --> algorithms[com.flightplanner.algorithms]                                                                                                                                  
-    algorithms --> models                                                                                                                                             
-    utils --> models                                                                                                
+    examples --> utils[com.flightplanner.utils]
+    core --> models[com.flightplanner.models]
+    core --> algorithms[com.flightplanner.algorithms]
+    algorithms --> models
+    utils --> models
     utils --> core
 ```
 
