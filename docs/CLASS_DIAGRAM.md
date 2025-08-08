@@ -322,14 +322,15 @@ graph TB
     end
 
     %% Dépendances entre packages
-    Main --> "com.flightplanner.examples"
-    "com.flightplanner.examples" --> "com.flightplanner.core"
-    "com.flightplanner.examples" --> "com.flightplanner.utils"
-    "com.flightplanner.core" --> "com.flightplanner.models"
-    "com.flightplanner.core" --> "com.flightplanner.algorithms"
-    "com.flightplanner.algorithms" --> "com.flightplanner.models"
-    "com.flightplanner.utils" --> "com.flightplanner.models"
-    "com.flightplanner.utils" --> "com.flightplanner.core"
+
+    Main --> examples[com.flightplanner.examples]
+    examples --> core[com.flightplanner.core]
+    examples --> utils[com.flightplanner.utils]                                                                                         
+    core --> models[com.flightplanner.models]                                                                                                                                 
+    core --> algorithms[com.flightplanner.algorithms]                                                                                                                                  
+    algorithms --> models                                                                                                                                             
+    utils --> models                                                                                                
+    utils --> core
 ```
 
 ### Responsabilités des packages
